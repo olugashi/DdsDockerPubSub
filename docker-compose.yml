@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  ddspublisher:
+    image: ${DOCKER_REGISTRY-}ddspublisher
+    build:
+      context: .
+      dockerfile: Publisher/Dockerfile
+    networks:
+       - dds_network
+  ddssubscriber:
+    image: ${DOCKER_REGISTRY-}ddssubscriber
+    build:
+      context: .
+      dockerfile: Subscriber/Dockerfile
+    networks:
+       - dds_network
+networks:
+    dds_network:
+        driver: bridge
