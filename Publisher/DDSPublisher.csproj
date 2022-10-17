@@ -4,18 +4,20 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\DdsDataModel\USER_QOS_PROFILES.xml" Link="USER_QOS_PROFILES.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Remove="rti_license.dat" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\DdsDataModel\rti_license.dat" Link="rti_license.dat">
+    <None Include="..\DdsDataModel\USER_QOS_PROFILES.xml" Link="USER_QOS_PROFILES.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="rti_license.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +33,12 @@
     <Compile Update="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="USER_QOS_PROFILES.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

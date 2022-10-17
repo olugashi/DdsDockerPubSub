@@ -2,16 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="rti_license.dat" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="rti_license.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Rti.ConnextDds.Extra" Version="6.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="rti_license.dat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="USER_QOS_PROFILES.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
