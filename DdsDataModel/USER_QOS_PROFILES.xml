@@ -49,21 +49,10 @@
 					<mask>UDPv4</mask>
 				</transport_builtin>
 				<discovery>
-					<initial_peers>
-						<element>172.18.0.3</element>
-						<element>172.18.0.2</element>
-						<element>127.0.0.1</element>						
-					</initial_peers>
-					<multicast_receive_addresses/>
+					<enabled_transports>
+						<element>udpv4</element>
+					</enabled_transports>
 				</discovery>
-				<property>
-					<value>
-						<element>
-							<name>dds.transport.UDPv4.builtin.multicast_enabled</name>
-							<value>0</value>
-						</element>
-					</value>
-				</property>
 			</participant_qos>
 			<!-- QoS specified to override the QoS in the base profile.
                  Configures the DataWriter in the example code. -->

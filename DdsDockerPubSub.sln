@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSSubscriber", "Subscriber
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{36EBB215-EB0C-42C9-8064-A0EDE0A0C45A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DdsDataModel", "DdsDataModel\DdsDataModel.csproj", "{0F988DA4-9424-4302-A3F8-55C8EC01A28F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{36EBB215-EB0C-42C9-8064-A0EDE0A0C45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36EBB215-EB0C-42C9-8064-A0EDE0A0C45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36EBB215-EB0C-42C9-8064-A0EDE0A0C45A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F988DA4-9424-4302-A3F8-55C8EC01A28F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F988DA4-9424-4302-A3F8-55C8EC01A28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F988DA4-9424-4302-A3F8-55C8EC01A28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F988DA4-9424-4302-A3F8-55C8EC01A28F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

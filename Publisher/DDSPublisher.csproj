@@ -7,20 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\DdsDataModel\USER_QOS_PROFILES.xml" Link="USER_QOS_PROFILES.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\DdsDataModel\rti_license.dat" Link="rti_license.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Rti.ConnextDds.Extra" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DdsDataModel\DdsDataModel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="rti_license.dat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

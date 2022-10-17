@@ -6,6 +6,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Publisher/DDSPublisher.csproj", "Publisher/"]
+COPY ["DdsDataModel/DdsDataModel.csproj", "DdsDataModel/"]
 RUN dotnet restore "Publisher/DDSPublisher.csproj"
 COPY . .
 WORKDIR "/src/Publisher"
